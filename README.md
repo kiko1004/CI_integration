@@ -1,16 +1,16 @@
 # Stack as a Service
 
-Implement http based service that has simple simple stack operations as http end points.
+Implement an HTTP based service that has basic stack operations as http end points.
 
 ## Stack end-points
 
-1. `/push?value=(number)`
-    - push a number value to the stack in the service
+1. `/push?value=X`
+    - pushs X (int number) to the stack.
 2. `/pop`
-    - will return the top value of the stack. If the stack is empty should return 400 (no-content)
+    - will return the top value of the stack. If the stack is empty should return http error.
 3. `/max`
     - Should return the max number value from the numbers in the stack
-    - Implement the operation with O(1) no matters how big is the stack
+    - Implement the operation with O(1)
 
 ## Stress test
 
