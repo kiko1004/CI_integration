@@ -17,13 +17,12 @@ Implement an HTTP based service that has basic stack operations as http end poin
 Implement a client app that stress tests this service. 
 - Measure the time of pushing 10M integeres, and then poping them to empty stack.
 - Measure the latency of calling `/max` on every 1000 pushes.
-- 
+
 ## Acceptable languages
 Go, Node.js, Java, Python, C++.
 Preferred language: Go
 
 ## Criteria
-
 The following are taken into consideration
  * Clean code
  * Proper comments in code (quality, not quantity)
