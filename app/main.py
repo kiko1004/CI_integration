@@ -1,13 +1,16 @@
-from flask import Flask, render_template, make_response, abort, jsonify, request, redirect
+from flask import Flask, request
+
 from . import Stack as st
 
 app = Flask(__name__)
 
 stack = st.Stack()
 
+
 @app.route("/")
 def home():
     return "<h1>Stack API by Kiril Spiridonov</h1><p>This site is a prototype API</p>"
+
 
 @app.route("/pop", methods=['GET'])
 def pop():
@@ -16,6 +19,7 @@ def pop():
         return "Record not found", 400
     else:
         return str(poped_value)
+
 
 @app.route("/push")
 def push():
@@ -27,9 +31,7 @@ def push():
     else:
         return "Error: No value field provided. Please specify a value."
 
+
 @app.route("/max", methods=['GET'])
 def max():
     return str(stack.max())
-
-
-
