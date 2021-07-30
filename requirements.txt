@@ -25,7 +25,6 @@ multidict
 numpy
 psutil
 pycparser
-pywin32
 pyzmq
 requests
 six
