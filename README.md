@@ -1,5 +1,5 @@
 # App:
-The app folder contains the first task, whic is the Stack as a Service.  <br />
+The app folder contains the first task, which is the Stack as a Service.  <br />
 It is also deployed online using Heroku at https://viastackkirilspiridonov.herokuapp.com/ <br />
 Locally you can use the `server_start.bat` file to run the server or using you python IDE and running `wsgi.py`.
 
