@@ -4,6 +4,7 @@ from . import Stack as st
 
 app = Flask(__name__)
 
+# Identifying stack at the beginning of the app, as this let us run it without a database and still use memory.
 stack = st.Stack()
 
 

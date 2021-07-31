@@ -1,3 +1,4 @@
+# The aim of this file is to provide a relative time needed for 10M requests by saving testing time.
 from time import time
 import aiohttp
 import asyncio
@@ -11,6 +12,7 @@ def cal_average(num):
     avg = sum_num / len(num)
     return avg
 
+# It is more accurate to use async approach rather than a simple for loop.
 async def main(mode):
     if mode == 'push':
         async with aiohttp.ClientSession() as session:
@@ -51,5 +53,6 @@ for _ in range(5):
     times.append(time() - start_time)
     print(f"Time {_+1} is {time() - start_time} for 100,000 pushes and pulls.")
 
+# The formula uses 500,000 requests to analyze 10M, given that the server can handle 10M requests.
 formula = (cal_average(times) + cal_average(np.diff(times)))*20*3.7
 print(f"Time Needed for execution:{formula}")
