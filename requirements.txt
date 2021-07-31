@@ -32,5 +32,6 @@ typing-extensions
 urllib3
 Werkzeug
 yarl
+bandit
 zope.event
 zope.interface
